@@ -1,0 +1,160 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  list-style: none;
+  text-decoration: none;
+  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+}
+
+body {
+ background: linear-gradient(140deg, #2c3e50, #4ca1af);
+  height: 100vh;
+  width: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  overflow: hidden;
+}
+
+.container {
+  width: 40%;
+  
+  background-color: white;
+  margin: auto;
+  padding: 20px;
+  border-radius: 30px;
+
+}
+
+.name {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 10px
+}
+
+.name span {
+  font-size: 30px;
+  text-align: center;
+  font-weight: 600;
+}
+
+.name span img {
+  width: 30px;
+}
+
+.input-box {
+  margin: auto;
+  padding: 5%;
+  position: relative;
+  max-width: 400px;
+  border: none;
+
+}
+
+.input-box input {
+  height: 30px;
+  padding: 20px;
+  width: 100%;
+  border-radius: 20px;
+  border: none;
+  background-color: rgb(233, 234, 234);
+  outline: none;
+}
+
+.input-box button {
+  position: absolute;
+
+  right: 0;
+  width: 20%;
+  border-radius: 20px;
+  height: auto;
+  padding: 12px;
+
+  background-color: #4d92d7;
+  border: none;
+  cursor: pointer;
+}
+
+.message {
+  text-align: center;
+  font-size: 1.1em;
+  color: green;
+  margin: 10px 0;
+   display: none; /* 🔥 Hides it completely including space */
+  transition: opacity 1.4s ease-in-out;
+}
+
+
+.task-list {
+  
+  max-width: 400px;
+  margin: auto;
+ max-height: 500px;
+  display: flex;
+  flex-direction: column;
+  gap: 13px;
+}
+
+.task {
+  max-width: 400px;
+  display: flex;
+  justify-content: space-between;
+  align-items: flex-start;
+  gap: 10px;
+  flex-wrap: nowrap; /* ✅ stay in one row */
+  
+ 
+
+}
+
+.task-label {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  cursor: pointer;
+  flex: 1;
+  flex-wrap: nowrap; /* ✅ keeps checkbox & text in one line */
+  overflow: hidden;
+}
+
+.task-checkbox {
+  display: none;
+  /* 💖 hides the real checkbox */
+}
+
+.check-circle::before {
+  content: "○";
+  font-size: 20px;
+  color: gray;
+}
+
+.task-checkbox:checked+.check-circle::before {
+  content: "✅";
+  color: green;
+
+}
+
+
+
+.task p {
+  margin: 0;
+  flex: 1;
+  /* 🧠 this makes it grow & allows spacing to work */
+  word-wrap: break-word;
+  overflow-wrap: break-word;
+  width: 100%;
+  /* 👈 makes sure it doesn't go out */
+  white-space: normal;
+  /* 👈 allows it to wrap normally */
+  font-size: 20px;
+}
+
+.task-label button {
+  border: none;
+  width: 13px;
+  height: 13px;
+  background-color: white;
+  cursor: pointer;
+}
