@@ -158,3 +158,22 @@ body {
   background-color: white;
   cursor: pointer;
 }
+
+
+
+
+@media (max-width: 768px) {
+  /* CSS rules for small screens (like tablets or phones) */
+  .container {
+    width: 90%;
+    padding: 10px;
+  }
+}
+
+@media (max-width: 968px) {
+  /* CSS rules for small screens (like tablets or phones) */
+  .container {
+    width: 60%;
+    padding: 10px;
+  }
+}
